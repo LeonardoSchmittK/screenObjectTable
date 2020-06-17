@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            body{
+                font-family:sans-serif;
+            }
+            table{
+                margin: auto;
+                margin-top:300px;
+                box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.575);
+            }
+            table th {
+                border:3px solid black;
+                padding: 16px;
+            }
+            table td{
+                text-align: center;
+                border: 4px solid rgba(209, 209, 209, 0.637);
+                padding: 6px;
+            }
+            table{
+                font-size:30px;
+                transition:2s ;
+            }
+            caption{
+               
+                
+                font-size:50px;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color:rgb(22, 22, 22);
+                letter-spacing: 10px;
+                text-shadow:1px 1px 12px rgba(0, 0, 0, 0.253);
+            }
+            table:hover{
+                transform: scale(1.2);
+                transition:1s;
+               
+            }
+        </style>
+</head>
+<body>
+    <table>
+        <caption>Screen object</caption>
+            <tr>
+                <th>screen.width</th>
+                <th>screen.availWidth</th>
+                <th>screen.height</th>
+                <th>screen.availHeight</th>
+                <th>screen.colorDepth</th>
+                <th>screen.pixelDepth</th>
+            </tr>
+            <tr>
+                <td class='screen'></td>
+                <td class='screen'></td>
+                <td class='screen'></td>
+                <td class='screen'></td>
+                <td class='screen'></td>
+                <td class='screen'></td>
+            </tr>
+    </table>
+    <script>
+        window.addEventListener('load',myFunction)
+        var tds=window.document.getElementsByClassName('screen');
+        function myFunction(){
+           tds[0].innerHTML=screen.width +'px';
+           tds[1].innerHTML=screen.availWidth +'px';
+           tds[2].innerHTML=screen.height +'px';
+           tds[3].innerHTML=screen.availHeight +'px';
+           tds[4].innerHTML=screen.colorDepth +'px'
+           tds[5].innerHTML=screen.pixelDepth +'px'
+        }
+        
+    </script>
+</body>
+</html>
